@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  ip_stats:
+    image: ip_stats_test
+    volumes:
+      - .:/app
