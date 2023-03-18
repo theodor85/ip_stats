@@ -1,9 +1,10 @@
 FROM ruby:3.2.1
 
 WORKDIR /app
-COPY . .
 
+COPY Gemfile      Gemfile
+COPY Gemfile.lock Gemfile.lock
 RUN gem install bundler
 RUN bundle install
 
-CMD [ "rspec" ]
+COPY . .
